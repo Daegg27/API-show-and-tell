@@ -4,7 +4,8 @@ from . import views
 app_name = "nba_app"
 urlpatterns = [
     path("", views.index, name="home"),
-    path("teams/", views.find_teams, name="browse"),
-    path("conference/<str:team>/", views.found_team, name="complete")
-    # path("help", views.test)
+    path("conferences/", views.find_teams, name="browse"),
+    path("conference/<str:conference>/", views.select_team, name="complete"),
+    path("conference/<str:conference>/<str:team>", views.view_team, name="destination")
+    # path("conference/<str:team>/<str:school>/", views.found_team, name="complete")
 ]

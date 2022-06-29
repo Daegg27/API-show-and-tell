@@ -10,10 +10,10 @@
     </head>
     <body>
         <div class="py-5"></div>
-        <h1>What team would you like to get information about?</h1>
+        <h1>What conference would you like to search into?</h1>
         <div class="container">
         <form method="POST">
-            <input placeholder="Choose a team" autocomplete="off" name="school-name" type="text"><br>
+            <!-- <input placeholder="Choose a team" autocomplete="off" name="school_name" type="text" value="{{school_name}}"><br> -->
             <div class="py-1"></div>
             {% for conference in all_conferences %}
             <button id={{ conference }}><a href="{% url 'nba_app:complete' conference %}"

@@ -8,11 +8,6 @@
         <link rel="stylesheet" href="/static/css/main.css">
     </head>
     <body>
-        <h1>Please select a school</h1>
-        <form method="post">
-            {% for team in list_of_teams %}
-            <button><a href="{% url 'nba_app:destination' conference team %}">{{ team }}</a></button>
-            {% endfor %}
-        </form>
+        
     </body>
 </html>
